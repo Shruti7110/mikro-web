@@ -24,7 +24,7 @@ export function DomainPageTemplate({ title, description, heroImage, features, ch
         
         <div className="container-padding relative z-20">
           <Link href="/">
-            <Button variant="link" className="text-slate-300 hover:text-white pl-0 mb-6">
+            <Button variant="ghost" className="text-slate-300 hover:text-white pl-0 mb-6">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Home
             </Button>
           </Link>
