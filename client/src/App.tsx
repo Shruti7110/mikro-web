@@ -14,10 +14,13 @@ import HighSpeedAutomation from "@/pages/HighSpeedAutomation";
 import DefenceAerospace from "@/pages/DefenceAerospace";
 import ExportSolutions from "@/pages/ExportSolutions";
 
+import Contact from "@/pages/Contact";
+
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/contact" component={Contact} />
       
       {/* Expertise Domain Pages */}
       <Route path="/laser-systems" component={LaserSystems} />

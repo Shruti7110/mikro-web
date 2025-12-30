@@ -88,12 +88,7 @@ export function Header() {
               </Link>
             )
           ))}
-          <Button 
-            className="bg-primary hover:bg-blue-700 text-white rounded-none px-6 uppercase tracking-wider text-xs font-bold"
-            onClick={() => handleNavClick("/#contact")}
-          >
-            Get a Quote
-          </Button>
+          
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -178,17 +173,19 @@ export function Footer() {
             <li className="flex items-start gap-3">
               <MapPin size={18} className="text-primary mt-0.5" />
               <span>
-                123 Industrial Estate, Phase 2,<br />
-                Pune, Maharashtra, India - 411001
+                Mikro Innotech India Pvt. Ltd.<br />
+                225, Sasewadi, Taluka Bhor,<br />
+                Off Pune–Bangalore Expressway,<br />
+                Pune 412205, Maharashtra, India
               </span>
             </li>
             <li className="flex items-center gap-3">
               <Phone size={18} className="text-primary" />
-              <a href="tel:+919876543210" className="hover:text-white">+91 98765 43210</a>
+              <a href="tel:+919876543210" className="hover:text-white">+91 830 880 2300</a>
             </li>
             <li className="flex items-center gap-3">
               <Mail size={18} className="text-primary" />
-              <a href="mailto:info@mikroinnotech.com" className="hover:text-white">info@mikroinnotech.com</a>
+              <a href="mailto:info@mikroinnotech.com" className="hover:text-white">sales@mikroindia.com</a>
             </li>
           </ul>
         </div>
