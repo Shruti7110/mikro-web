@@ -6,29 +6,112 @@
 
 :root {
   /* Corporate Blue Palette based on provided requirements */
-  --primary: 215 100% 45%;      /* #0066CC - Strong Corporate Blue */
+  --background: 0 0% 100%;
+  --foreground: 222 47% 11%;
+
+  --primary: 215 100% 45%;
   --primary-foreground: 0 0% 100%;
-  
-  --secondary: 210 20% 96%;     /* Light Blue-Grey Background */
+
+  --secondary: 210 20% 96%;
   --secondary-foreground: 222 47% 11%;
-  
+
   --muted: 210 40% 96%;
   --muted-foreground: 215 16% 47%;
-  
-  --accent: 215 100% 95%;       /* Very light blue for hover states */
+
+  --accent: 215 100% 95%;
   --accent-foreground: 222 47% 11%;
-  
+
   --destructive: 0 84% 60%;
   --destructive-foreground: 210 40% 98%;
-  
+
   --border: 214 32% 91%;
   --input: 214 32% 91%;
   --ring: 215 100% 45%;
-  
-  --background: 0 0% 100%;
-  --foreground: 222 47% 11%;     /* Dark slate for text */
-  
-  --radius: 0.25rem;            /* Professional, slight rounding */
+
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --card-border: 214 32% 91%;
+
+  --sidebar: 210 20% 98%;
+  --sidebar-foreground: 222 47% 11%;
+  --sidebar-border: 214 32% 91%;
+  --sidebar-primary: 215 100% 45%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 215 100% 95%;
+  --sidebar-accent-foreground: 222 47% 11%;
+  --sidebar-ring: 215 100% 45%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --popover-border: 214 32% 91%;
+
+  --chart-1: 215 100% 45%;
+  --chart-2: 210 20% 96%;
+  --chart-3: 222 47% 11%;
+  --chart-4: 215 16% 47%;
+  --chart-5: 0 84% 60%;
+
+  --radius: 0.25rem;
+
+  /* Button/Badge outline & elevation defaults */
+  --button-outline: rgba(0,0,0, .10);
+  --badge-outline: rgba(0,0,0, .05);
+  --opaque-button-border-intensity: -8;
+  --elevate-1: rgba(0,0,0, .03);
+  --elevate-2: rgba(0,0,0, .08);
+}
+
+.dark {
+  --background: 222 47% 11%;
+  --foreground: 210 40% 98%;
+
+  --primary: 217 91% 60%;
+  --primary-foreground: 222 47% 11%;
+
+  --secondary: 217 33% 17%;
+  --secondary-foreground: 210 40% 98%;
+
+  --muted: 217 33% 17%;
+  --muted-foreground: 215 20% 65%;
+
+  --accent: 217 33% 17%;
+  --accent-foreground: 210 40% 98%;
+
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 217 33% 17%;
+  --input: 217 33% 17%;
+  --ring: 224 76% 48%;
+
+  --card: 222 47% 11%;
+  --card-foreground: 210 40% 98%;
+  --card-border: 217 33% 17%;
+
+  --sidebar: 222 47% 11%;
+  --sidebar-foreground: 210 40% 98%;
+  --sidebar-border: 217 33% 17%;
+  --sidebar-primary: 217 91% 60%;
+  --sidebar-primary-foreground: 222 47% 11%;
+  --sidebar-accent: 217 33% 17%;
+  --sidebar-accent-foreground: 210 40% 98%;
+  --sidebar-ring: 224 76% 48%;
+
+  --popover: 222 47% 11%;
+  --popover-foreground: 210 40% 98%;
+  --popover-border: 217 33% 17%;
+
+  --chart-1: 217 91% 60%;
+  --chart-2: 217 33% 17%;
+  --chart-3: 210 40% 98%;
+  --chart-4: 215 20% 65%;
+  --chart-5: 0 63% 31%;
+
+  --button-outline: rgba(255,255,255, .10);
+  --badge-outline: rgba(255,255,255, .05);
+  --opaque-button-border-intensity: 9;
+  --elevate-1: rgba(255,255,255, .04);
+  --elevate-2: rgba(255,255,255, .09);
 }
 
 @layer base {
