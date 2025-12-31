@@ -33,7 +33,7 @@ export function Header() {
     { name: "Home", path: "/" },
     { name: "Expertise", path: "/#expertise" },
     { name: "About Us", path: "/#about" },
-    { name: "Contact", path: "/#contact" },
+    { name: "Contact", path: "/contact" },
   ];
 
   const handleNavClick = (path: string) => {

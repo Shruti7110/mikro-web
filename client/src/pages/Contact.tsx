@@ -7,7 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { insertContactMessageSchema, type InsertContactMessage } from "@shared/schema";
 import { useCreateContactMessage } from "@/hooks/use-contact";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail } from "lucide-react";
 
 export default function Contact() {
   const mutation = useCreateContactMessage();
@@ -76,7 +76,7 @@ export default function Contact() {
                 <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
                   <Mail className="text-primary w-5 h-5" /> Email
                 </h3>
-                <div className="space-y-2">
+                <div className="space-y-2 text-sm">
                   <a href="mailto:mikroinnotech@gmail.com" className="block text-primary hover:underline">mikroinnotech@gmail.com</a>
                   <a href="mailto:sales@mikroindia.com" className="block text-primary hover:underline">sales@mikroindia.com</a>
                 </div>
@@ -86,17 +86,17 @@ export default function Contact() {
                 <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
                   <Phone className="text-primary w-5 h-5" /> Phone
                 </h3>
-                <div className="space-y-4">
+                <div className="space-y-4 text-sm">
                   <div>
-                    <p className="text-sm font-bold text-slate-900">Contact No:</p>
+                    <p className="font-bold text-slate-900">Contact No:</p>
                     <p className="text-primary">+91 8308802310</p>
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-slate-900">Landline:</p>
+                    <p className="font-bold text-slate-900">Landline:</p>
                     <p className="text-primary">+91-20-20240556</p>
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-slate-900">Mobile:</p>
+                    <p className="font-bold text-slate-900">Mobile:</p>
                     <p className="text-primary">+91 8956019217</p>
                   </div>
                 </div>
@@ -200,7 +200,7 @@ export default function Contact() {
 
                     <Button 
                       type="submit" 
-                      className="w-full md:w-auto px-12 py-6 text-lg h-auto"
+                      className="w-full md:w-auto px-12 py-6 text-lg h-auto bg-primary hover:bg-blue-700 text-white rounded-none uppercase tracking-wider font-bold"
                       disabled={mutation.isPending}
                     >
                       {mutation.isPending ? "Submitting..." : "Submit"}
@@ -213,7 +213,7 @@ export default function Contact() {
               <div className="mt-12 aspect-video bg-slate-200 rounded-lg flex items-center justify-center border border-slate-300">
                 <div className="text-center">
                   <MapPin className="w-12 h-12 text-slate-400 mx-auto mb-2" />
-                  <p className="text-slate-500">Interactive Map View</p>
+                  <p className="text-slate-500 font-medium">Interactive Map View</p>
                   <Button variant="outline" className="mt-4" onClick={() => window.open('https://www.google.com/maps/dir/?api=1&destination=225,%20Sasewadi%20Tal-%20Bhor,%20Pune%20Banglore%20Expressway,%20Sasewadi,%20Maharashtra%20412205,%20India', '_blank')}>
                     Get Directions
                   </Button>
