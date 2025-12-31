@@ -11,14 +11,6 @@ const fadeIn = {
   transition: { duration: 0.6 },
 };
 
-const staggerContainer = {
-  animate: {
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
-
 const statistics = [
   { label: "Years of Experience", value: "17+" },
   { label: "Projects Delivered", value: "500+" },

@@ -205,18 +205,8 @@ export default function Contact() {
                     </Button>
                   </form>
                 </Form>
-              </div>
-
-              {/* Map Placeholder */}
-              <div className="mt-12 aspect-video bg-slate-200 rounded-lg flex items-center justify-center border border-slate-300">
-                <div className="text-center">
-                  <MapPin className="w-12 h-12 text-slate-400 mx-auto mb-2" />
-                  <p className="text-slate-500 font-medium">Interactive Map View</p>
-                  <Button variant="outline" className="mt-4" onClick={() => window.open('https://www.google.com/maps/dir/?api=1&destination=225,%20Sasewadi%20Tal-%20Bhor,%20Pune%20Banglore%20Expressway,%20Sasewadi,%20Maharashtra%20412205,%20India', '_blank')}>
-                    Get Directions
-                  </Button>
-                </div>
-              </div>
+              </div>             
+              
             </div>
           </div>
         </div>
