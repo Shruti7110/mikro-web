@@ -89,15 +89,15 @@ export default function Contact() {
                 <div className="space-y-4 text-sm">
                   <div>
                     <p className="font-bold text-slate-900">Contact No:</p>
-                    <p className="text-primary">+91 8308802310</p>
+                    <p className="text-primary">+91 89560 19201</p>
                   </div>
                   <div>
                     <p className="font-bold text-slate-900">Landline:</p>
-                    <p className="text-primary">+91-20-20240556</p>
+                    <p className="text-primary">+91 89560 19217</p>
                   </div>
                   <div>
                     <p className="font-bold text-slate-900">Mobile:</p>
-                    <p className="text-primary">+91 8956019217</p>
+                    <p className="text-primary">+91 83088 02310</p>
                   </div>
                 </div>
               </div>

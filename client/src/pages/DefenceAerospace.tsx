@@ -34,11 +34,9 @@ export default function DefenceAerospace() {
               variants={fadeIn}
               className="max-w-3xl"
             >
-              <Badge className="mb-4 bg-primary text-white border-none uppercase tracking-widest px-4 py-1">
-                Strategic Excellence
-              </Badge>
+              
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Defence & <span className="text-primary">Aerospace</span>
+                <span className="text-primary">DEFENCE AUTOMATION</span>
               </h1>
               <p className="text-xl text-slate-300 leading-relaxed">
                 Mission-critical manufacturing solutions meeting stringent global defence standards. We deliver precision, reliability, and security for high-stakes environments.
@@ -89,15 +87,7 @@ export default function DefenceAerospace() {
                     className="w-full h-auto object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-lg shadow-xl border border-slate-100 hidden md:block max-w-[240px]">
-                  <div className="flex items-center gap-3 mb-2">
-                    <Target className="text-primary w-6 h-6" />
-                    <span className="font-bold text-slate-900 uppercase text-xs tracking-wider">Zero Defect Policy</span>
-                  </div>
-                  <p className="text-xs text-slate-500 leading-relaxed">
-                    Ensuring mission success through rigorous quality control and precision assembly.
-                  </p>
-                </div>
+                
               </motion.div>
             </div>
 
@@ -109,15 +99,10 @@ export default function DefenceAerospace() {
               variants={fadeIn}
               className="space-y-12"
             >
-              <div className="text-center max-w-3xl mx-auto">
-                <div className="inline-flex items-center gap-2 text-primary font-bold tracking-wider uppercase text-sm mb-4">
-                  <PlayCircle className="w-5 h-5" /> Video Showcase
+              <div className="text-center max-w-3xl mx-auto">                
+                
+                <h2 className="text-3xl font-bold text-slate-900 mb-6">Technical Demonstration</h2>              
                 </div>
-                <h2 className="text-3xl font-bold text-slate-900 mb-6">Technical Demonstration</h2>
-                <p className="text-slate-600">
-                  Witness our precision automation in action. This technical demonstration showcases the intricate assembly and testing processes we implement for mission-critical components.
-                </p>
-              </div>
 
               <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl bg-black aspect-video relative group">
                 <iframe
@@ -155,7 +140,7 @@ export default function DefenceAerospace() {
                 <CardContent className="pt-6">
                   <Target className="w-10 h-10 text-primary mb-4" />
                   <h3 className="text-xl font-bold mb-2">Precision Scale</h3>
-                  <p className="text-slate-600 text-sm">Micron-level accuracy for complex aerospace and defence components.</p>
+                  <p className="text-slate-600 text-sm">Micron-level accuracy for complex defence components.</p>
                 </CardContent>
               </Card>
             </div>
