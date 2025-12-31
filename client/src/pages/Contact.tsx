@@ -145,7 +145,7 @@ export default function Contact() {
                           <FormItem>
                             <FormLabel>Phone</FormLabel>
                             <FormControl>
-                              <Input placeholder="Enter phone number" {...field} />
+                              <Input placeholder="Enter phone number" {...field} value={field.value ?? ""} />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -158,7 +158,7 @@ export default function Contact() {
                           <FormItem>
                             <FormLabel>Subject</FormLabel>
                             <FormControl>
-                              <Input placeholder="Enter subject" {...field} />
+                              <Input placeholder="Enter subject" {...field} value={field.value ?? ""} />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -173,7 +173,7 @@ export default function Contact() {
                         <FormItem>
                           <FormLabel>Address</FormLabel>
                           <FormControl>
-                            <Input placeholder="Enter your address" {...field} />
+                            <Input placeholder="Enter your address" {...field} value={field.value ?? ""} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
