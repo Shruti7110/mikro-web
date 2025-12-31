@@ -1,7 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Mail, Phone, MapPin, Linkedin } from "lucide-react";
+import { Menu, X, Mail, Phone, MapPin, Linkedin, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import logo from "/assets/logo.png";
 
 // Determine if link is active
@@ -29,9 +35,17 @@ export function Header() {
     setIsOpen(false);
   }, [location]);
 
+  const expertiseLinks = [
+    { name: "Laser Systems", path: "/laser-systems" },
+    { name: "Electric Vehicles", path: "/electric-vehicles" },
+    { name: "High Speed Automation", path: "/high-speed-automation" },
+    { name: "Defence & Aerospace", path: "/defence-aerospace" },
+    { name: "Export Solutions", path: "/export-solutions" },
+    { name: "Pharma Automation", path: "/pharma-automation" },
+  ];
+
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Expertise", path: "/#expertise" },
     { name: "About Us", path: "/#about" },
     { name: "Contact", path: "/contact" },
   ];
@@ -43,9 +57,6 @@ export function Header() {
       if (el) {
         el.scrollIntoView({ behavior: "smooth" });
       } else if (location !== "/") {
-        // If not on home page, we can't scroll to ID directly.
-        // Wouter handles the route change, but we might need a small delay or context to scroll after load.
-        // For simplicity in this stack, we rely on Wouter to go to /, then user might need to click again or we handle it in Home.
         window.location.href = path; 
       }
     }
@@ -67,28 +78,48 @@ export function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            link.path.startsWith("/#") ? (
-              <button
-                key={link.name}
-                onClick={() => handleNavClick(link.path)}
-                className="text-sm font-medium text-slate-600 hover:text-primary transition-colors uppercase tracking-wide"
-              >
-                {link.name}
-              </button>
-            ) : (
-              <Link 
-                key={link.name} 
-                href={link.path} 
-                className={`text-sm font-medium transition-colors uppercase tracking-wide ${
-                  isActive(link.path) ? "text-primary font-bold" : "text-slate-600 hover:text-primary"
-                }`}
-              >
-                {link.name}
-              </Link>
-            )
-          ))}
-          
+          <Link 
+            href="/" 
+            className={`text-sm font-medium transition-colors uppercase tracking-wide ${
+              isActive("/") ? "text-primary font-bold" : "text-slate-600 hover:text-primary"
+            }`}
+          >
+            Home
+          </Link>
+
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1 text-sm font-medium text-slate-600 hover:text-primary transition-colors uppercase tracking-wide focus:outline-none">
+              Expertise <ChevronDown className="h-4 w-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start" className="w-56">
+              {expertiseLinks.map((item) => (
+                <DropdownMenuItem key={item.path} asChild>
+                  <Link 
+                    href={item.path}
+                    className="w-full cursor-pointer text-sm py-2"
+                  >
+                    {item.name}
+                  </Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <button
+            onClick={() => handleNavClick("/#about")}
+            className="text-sm font-medium text-slate-600 hover:text-primary transition-colors uppercase tracking-wide"
+          >
+            About Us
+          </button>
+
+          <Link 
+            href="/contact" 
+            className={`text-sm font-medium transition-colors uppercase tracking-wide ${
+              isActive("/contact") ? "text-primary font-bold" : "text-slate-600 hover:text-primary"
+            }`}
+          >
+            Contact
+          </Link>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -102,31 +133,50 @@ export function Header() {
 
       {/* Mobile Nav */}
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 bg-white border-b border-border shadow-lg p-4 md:hidden flex flex-col gap-4">
-          {navLinks.map((link) => (
-             link.path.startsWith("/#") ? (
-              <button
-                key={link.name}
-                onClick={() => handleNavClick(link.path)}
-                className="text-left py-2 text-sm font-medium text-slate-600 hover:text-primary uppercase tracking-wide"
-              >
-                {link.name}
-              </button>
-            ) : (
+        <div className="absolute top-full left-0 right-0 bg-white border-b border-border shadow-lg p-4 md:hidden flex flex-col gap-4 max-h-[80vh] overflow-y-auto">
+          <Link 
+            href="/" 
+            className={`py-2 text-sm font-medium uppercase tracking-wide ${
+              isActive("/") ? "text-primary font-bold" : "text-slate-600 hover:text-primary"
+            }`}
+          >
+            Home
+          </Link>
+
+          <div className="flex flex-col gap-2">
+            <span className="text-xs font-bold text-slate-400 uppercase tracking-widest px-2">Expertise</span>
+            {expertiseLinks.map((item) => (
               <Link 
-                key={link.name} 
-                href={link.path} 
-                className={`py-2 text-sm font-medium uppercase tracking-wide ${
-                  isActive(link.path) ? "text-primary font-bold" : "text-slate-600 hover:text-primary"
+                key={item.path} 
+                href={item.path} 
+                className={`pl-4 py-2 text-sm font-medium uppercase tracking-wide ${
+                  isActive(item.path) ? "text-primary font-bold" : "text-slate-600 hover:text-primary"
                 }`}
               >
-                {link.name}
+                {item.name}
               </Link>
-            )
-          ))}
+            ))}
+          </div>
+
+          <button
+            onClick={() => handleNavClick("/#about")}
+            className="text-left py-2 text-sm font-medium text-slate-600 hover:text-primary uppercase tracking-wide"
+          >
+            About Us
+          </button>
+
+          <Link 
+            href="/contact" 
+            className={`py-2 text-sm font-medium uppercase tracking-wide ${
+              isActive("/contact") ? "text-primary font-bold" : "text-slate-600 hover:text-primary"
+            }`}
+          >
+            Contact
+          </Link>
+
           <Button 
             className="w-full bg-primary hover:bg-blue-700 text-white rounded-none uppercase tracking-wider text-xs font-bold"
-             onClick={() => handleNavClick("/#contact")}
+             onClick={() => handleNavClick("/contact")}
           >
             Get a Quote
           </Button>

@@ -156,10 +156,10 @@ export default function ElectricVehicles() {
                 </div>
               </section>
               {/* Call to Action */}
-              <section className="py-20 bg-primary text-white text-center">
+              <section className="py-20 bg-slate-200 text-white text-center">
                 <div className="container-padding">
                   <h2 className="text-3xl md:text-4xl font-bold mb-8">Ready to Automate Your EV Production?</h2>
-                  <p className="text-xl mb-10 opacity-90 max-w-2xl mx-auto">
+                  <p className="text-xl mb-10 text-slate-900 max-w-2xl mx-auto">
                     Consult with our engineering experts to design a customized assembly line tailored to your specific module and scale requirements.
                   </p>
                   <div className="flex flex-wrap justify-center gap-4">
@@ -167,12 +167,7 @@ export default function ElectricVehicles() {
                       <button className="bg-white text-primary px-8 py-4 rounded-none font-bold uppercase tracking-wider hover:bg-slate-100 transition-colors">
                         Request a Quote
                       </button>
-                    </a>
-                    <a href="/#expertise">
-                      <button className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-none font-bold uppercase tracking-wider hover:bg-white/10 transition-colors">
-                        View All Solutions
-                      </button>
-                    </a>
+                    </a>                    
                   </div>
                 </div>
               </section>

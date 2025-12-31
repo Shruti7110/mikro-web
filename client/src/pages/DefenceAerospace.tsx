@@ -61,7 +61,7 @@ export default function DefenceAerospace() {
                 </div>
                 <h2 className="text-3xl font-bold text-slate-900">Advanced Manufacturing Solutions</h2>
                 <p className="text-lg text-slate-600 leading-relaxed">
-                  Our expertise in Defence and Aerospace automation encompasses the design and integration of special-purpose machinery that adheres to the highest levels of accuracy and security. We bridge the gap between complex engineering concepts and reliable manufacturing reality.
+                  Our expertise in Defence automation encompasses the design and integration of special-purpose machinery that adheres to the highest levels of accuracy and security. We bridge the gap between complex engineering concepts and reliable manufacturing reality.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {capabilities.map((item) => (

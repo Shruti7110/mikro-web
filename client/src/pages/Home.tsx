@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
+import CompanyImage from "@assets/mikro_img.png";
 import {
   ArrowRight,
   CheckCircle2,
@@ -190,8 +191,8 @@ export default function Home() {
               {/* Using Unsplash image for About Section representation */}
               <div className="relative rounded-lg overflow-hidden shadow-2xl">
                 {/* industrial automation robot arm factory */}
-                <img
-                  src="https://pixabay.com/get/g88d147cef8e859045f549bdd85f1b10145e98dcca6336e898b4404bd4296d6e83ccaa6b6f1084f434d00f7a6a32d28cb4aa18671fe43077c5ebce17f405924e0_1280.jpg"
+                <img 
+                  src= {CompanyImage}
                   alt="Advanced Automation Facility"
                   className="w-full h-auto object-cover"
                 />
