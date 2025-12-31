@@ -1,6 +1,5 @@
 import { Link } from "wouter";
 import { Layout } from "@/components/Layout";
-import { ContactForm } from "@/components/ContactForm";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
@@ -209,16 +208,7 @@ export default function Home() {
             </motion.div>
           </div>
         </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="section-padding bg-slate-50">
-        <div className="container-padding">
-          <div className="max-w-4xl mx-auto">
-            <ContactForm />
-          </div>
-        </div>
-      </section>
+      </section>      
     </Layout>
   );
 }
