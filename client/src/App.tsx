@@ -8,6 +8,7 @@ import NotFound from "@/pages/not-found";
 // Page Imports
 import Home from "@/pages/Home";
 import About from "@/pages/About";
+import News from "@/pages/News";
 import LaserSystems from "@/pages/LaserSystems";
 import ElectricVehicles from "@/pages/ElectricVehicles";
 import PharmaAutomation from "@/pages/PharmaAutomation";
@@ -22,6 +23,7 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
+      <Route path="/news" component={News} />
       <Route path="/contact" component={Contact} />
       
       {/* Expertise Domain Pages */}
