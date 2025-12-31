@@ -105,12 +105,14 @@ export function Header() {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <button
-            onClick={() => handleNavClick("/#about")}
-            className="text-sm font-medium text-slate-600 hover:text-primary transition-colors uppercase tracking-wide"
+          <Link 
+            href="/about" 
+            className={`text-sm font-medium transition-colors uppercase tracking-wide ${
+              isActive("/about") ? "text-primary font-bold" : "text-slate-600 hover:text-primary"
+            }`}
           >
             About Us
-          </button>
+          </Link>
 
           <Link 
             href="/contact" 
@@ -158,12 +160,14 @@ export function Header() {
             ))}
           </div>
 
-          <button
-            onClick={() => handleNavClick("/#about")}
-            className="text-left py-2 text-sm font-medium text-slate-600 hover:text-primary uppercase tracking-wide"
+          <Link 
+            href="/about" 
+            className={`py-2 text-sm font-medium uppercase tracking-wide ${
+              isActive("/about") ? "text-primary font-bold" : "text-slate-600 hover:text-primary"
+            }`}
           >
             About Us
-          </button>
+          </Link>
 
           <Link 
             href="/contact" 
