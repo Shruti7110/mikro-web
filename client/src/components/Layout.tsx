@@ -114,7 +114,6 @@ export function Header() {
           >
             About Us
           </Link>
-
           <Link 
             href="/contact" 
             className={`text-sm font-medium transition-colors uppercase tracking-wide ${
@@ -122,6 +121,14 @@ export function Header() {
             }`}
           >
             Contact
+          </Link>
+          <Link 
+            href="/news" 
+            className={`py-2 text-sm font-medium uppercase tracking-wide ${
+              isActive("/news") ? "text-primary font-bold" : "text-slate-600 hover:text-primary"
+            }`}
+          >
+            News
           </Link>
         </nav>
 
@@ -178,13 +185,17 @@ export function Header() {
           >
             Contact
           </Link>
-
-          <Button 
-            className="w-full bg-primary hover:bg-blue-700 text-white rounded-none uppercase tracking-wider text-xs font-bold"
-             onClick={() => handleNavClick("/contact")}
+          
+          <Link 
+            href="/news" 
+            className={`py-2 text-sm font-medium uppercase tracking-wide ${
+              isActive("/news") ? "text-primary font-bold" : "text-slate-600 hover:text-primary"
+            }`}
           >
-            Get a Quote
-          </Button>
+            News
+          </Link>
+
+          
         </div>
       )}
     </header>
