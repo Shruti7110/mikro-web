@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle2, Award, Shield, Target, Users, Zap, Globe, Lightbulb, Factory, Activity, Microscope } from "lucide-react";
 import partnersImage from "@assets/image_1767179513500.png";
+import coverImage from "@assets/Mikro_team_photo.png";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -15,7 +16,6 @@ const statistics = [
   { label: "Years of Experience", value: "17+" },
   { label: "Projects Delivered", value: "500+" },
   { label: "Industries Served", value: "6+" },
-  { label: "Growth Y-o-Y", value: "50%" },
 ];
 
 const highlights = [
@@ -66,7 +66,7 @@ export default function About() {
     <Layout>
       <div className="bg-white min-h-screen selection:bg-primary/10">
         {/* Floating Header Hero */}
-        <section className="relative pt-32 pb-24 overflow-hidden bg-slate-900 border-b border-white/5">
+        <section className="relative pt-32 pb-24 overflow-hidden bg-slate-800 border-b border-white/5">
           <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/10 blur-[120px] rounded-full translate-x-1/2 -translate-y-1/2" />
           <div className="container-padding relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -75,16 +75,13 @@ export default function About() {
                 animate="animate"
                 variants={fadeIn}
                 className="lg:col-span-7 space-y-8"
-              >
-                <Badge variant="outline" className="border-primary/50 text-primary uppercase tracking-[0.2em] px-4 py-1.5 bg-primary/5">
-                  Our Legacy & Vision
-                </Badge>
+              >                
                 <h1 className="text-5xl md:text-7xl font-bold text-white leading-tight">
                   Precision in <br />
                   <span className="text-primary italic">Every Motion.</span>
                 </h1>
                 <p className="text-xl text-slate-400 max-w-xl leading-relaxed">
-                  Established in 2008, Mikro Innotech has been a pioneer in world-class automation, serving mission-critical industries for over 17 years.
+                  Trusted for over 17 years to deliver customer-specific Special Purpose Machines with proven accuracy across industries.
                 </p>
                 
                 <div className="flex flex-wrap gap-8 pt-4">
@@ -105,7 +102,7 @@ export default function About() {
               >
                 <div className="aspect-square bg-slate-800 rounded-3xl overflow-hidden border border-white/10 relative group">
                   <img 
-                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800" 
+                    src={coverImage} 
                     alt="Mikro Innotech Engineering"
                     className="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 transition-all duration-700"
                   />
@@ -130,20 +127,17 @@ export default function About() {
                 <div className="space-y-4">
                   <h2 className="text-4xl font-bold text-slate-900">Proven Expertise <br />Across Horizons</h2>
                   <p className="text-slate-500 text-lg leading-relaxed">
-                    Over 17 years, we have mastered a wide range of laser applications and assembly solutions. From laser cutting to motor assembly, our horizontal breadth is our greatest strength.
+                    Established in 2008, We deliver automation solutions tailored to both Indian and international markets. With over 17 years of experience, we have successfully provided solutions across diverse industries, including automotive, pharmaceutical, defence, and electronics, and we continue to expand our capabilities to serve additional sectors
+                  </p>
+                  <p className="text-slate-500 text-lg leading-relaxed">
+                    We have proven expertise in leak test solutions across multiple product lines, consistently delivering reliable and effective systems to our customers. Our portfolio includes a wide range of laser-based applications such as laser cutting, laser welding, laser marking, laser drilling, laser cladding, laser hardening, and laser cleaning.
+                  </p>
+                  <p className="text-slate-500 text-lg leading-relaxed">
+                    In addition, we specialize in complete assembly line solutions, including motor assembly lines, bumper assembly lines, and headlamp–taillamp assembly lines. We also offer local support and services for EV battery pack assembly lines, along with EZCAM calibration services, ensuring end-to-end support and operational excellence for our clients.
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  {industrySectors.map((sector, i) => (
-                    <div key={i} className="flex items-center gap-4 p-4 rounded-xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:shadow-xl hover:shadow-primary/5 transition-all group">
-                      <div className="w-10 h-10 rounded-lg bg-white shadow-sm flex items-center justify-center text-slate-400 group-hover:text-primary group-hover:bg-primary/5 transition-colors">
-                        {sector.icon}
-                      </div>
-                      <span className="font-bold text-slate-800 tracking-wide">{sector.name}</span>
-                    </div>
-                  ))}
-                </div>
+                
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-12">
@@ -182,48 +176,19 @@ export default function About() {
               />
             </motion.div>
           </div>
-        </section>
-
-        {/* Certifications - Modern List */}
-        <section className="py-32">
-          <div className="container-padding">
-            <div className="flex flex-col lg:flex-row gap-20">
-              <div className="lg:w-1/3 space-y-6">
-                <h2 className="text-4xl font-bold text-slate-900 leading-tight">Commitment to <br /><span className="text-primary">Global Excellence</span></h2>
-                <p className="text-slate-500 leading-relaxed">Our certifications are a testament to our unwavering dedication to quality, safety, and operational excellence.</p>
-                <div className="pt-8">
-                  <div className="flex items-center gap-4 text-slate-900 font-bold text-lg border-l-4 border-primary pl-6">
-                    ISO 9001:2015 Certified
-                  </div>
-                </div>
-              </div>
-              
-              <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
-                {certifications.map((cert, i) => (
-                  <div key={i} className="group flex items-center justify-between p-8 rounded-2xl border border-slate-100 hover:border-primary/20 hover:bg-slate-50/50 transition-all">
-                    <div className="space-y-1">
-                      <div className="text-lg font-bold text-slate-900 group-hover:text-primary transition-colors">{cert.name}</div>
-                      <div className="text-slate-500 text-sm">{cert.desc}</div>
-                    </div>
-                    <Award className="w-8 h-8 text-slate-200 group-hover:text-primary/20 transition-colors" />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+        </section>        
 
         {/* Specialized CTA */}
         <section className="py-12 pb-32">
           <div className="container-padding">
-            <div className="bg-primary rounded-[3rem] p-12 md:p-20 text-white relative overflow-hidden">
+            <div className="bg-sky-600 rounded-[3rem] p-12 md:p-20 text-white relative overflow-hidden">
               <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 blur-[100px] rounded-full" />
               <div className="relative z-10 text-center max-w-3xl mx-auto space-y-8">
-                <h2 className="text-4xl md:text-5xl font-bold leading-tight">Ready to Wide Your Horizon with Our Expertise?</h2>
+                <h2 className="text-4xl md:text-5xl font-bold leading-tight">Ready to Widen Your Horizon with Our Expertise?</h2>
                 <p className="text-xl text-white/80">Connect with our engineering team to explore custom solutions for your industry.</p>
                 <div className="pt-4">
                   <a href="/contact">
-                    <button className="bg-white text-primary px-10 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-slate-100 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-black/10">
+                    <button className="bg-white text-primary px-10 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-slate-200 transition-all hover:scale-105 active:scale-95 shadow-xl shadow-black/10">
                       Begin Consultation
                     </button>
                   </a>
